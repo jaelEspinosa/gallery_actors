@@ -9,8 +9,16 @@ export class ActorsService {
   constructor(private http: HttpClient) { }
 
   getActors(){
-    return this.http.get('http://localhost:5000/actores');
+    return this.http.get('https://ators-api-jaelespinosa.vercel.app/actores');
   }
 
 }
-/* https://api-liga-equipos-futbol.vercel.app/jugadores */
+
+// DESPLEGADO
+
+/* https://ators-api-jaelespinosa.vercel.app/actores */
+
+
+//LOCAL
+
+/* http://localhost:5000/actores */
