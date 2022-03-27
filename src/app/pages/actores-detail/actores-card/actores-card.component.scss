@@ -1,0 +1,26 @@
+.contain{
+  margin: auto;
+  max-width: 1200px;
+  background-color:rgb(243, 236, 226);
+  padding:25px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  img{
+    border-radius: 10px;
+  }
+  .description{
+    border:1px solid gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 18px gray ;
+    padding:20px;
+    text-align: justify;
+  }
+  .name{
+    font-weight: bold;
+    text-transform:uppercase ;
+
+  }
+}
