@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/scss/bootstrap-grid";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+
+@import "app/styles/elements/imgPreview.elements";
+@import "app/styles/elements/list.elements";
+@import "app/styles/elements/anchor.elements";
+@import "app/styles/elements/body.elements";
+@import "app/styles/elements/border.elements";
+@import "app/styles/elements/imgCard.elements";
+@import "app/styles/elements/span.elements";
+@import "app/styles/elements/h4.components";
+
+@import "app/styles/settings/fontSice";
