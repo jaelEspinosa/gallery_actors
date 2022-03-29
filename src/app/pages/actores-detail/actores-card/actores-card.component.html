@@ -1,14 +1,21 @@
 
 
 
-<div class = "contain">
-  <div class = "font__xl name">{{actor.name}}</div>
+<div *ngIf="actor" class="contain">
+  <div class="font__xl name">{{actor.name}}</div>
   <img class="imgCard" src="{{actor.img}}" alt="">
-  <h5><span class = "span font__s">Peliculas :</span> {{actor.charact}}</h5>
-  <div class = "description">
-    <p><span class = "span">Resumen: </span>  {{actor.description}}</p>
+  <h5><span class="span font__s">Peliculas :</span> {{actor.charact}}</h5>
+  <div class="description">
+    <p><span class="span">Resumen: </span> {{actor.description}}</p>
   </div>
-<div>
-  <a target="_blank" href="{{actor.link}}"><span>Más información</span> </a>
-</div>
+  <div class="card-footer">
+    <a target="_blank" href="{{actor.link}}"><span>Más información</span> </a>
+
+  <div class = "buttons">
+    <button (click)="deleteActor()" class='button'>Eliminar</button>
+    <button (click)="editActor(actor)" class='button'>Editar</button>
+  </div>
+    <!-- (click)="miFuncion('le paso una variable')" -->
+
+  </div>
 </div>

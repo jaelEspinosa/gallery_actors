@@ -1,3 +1,4 @@
+import { EditComponent } from './pages/edit/edit.component';
 import { ActoresDetailComponent } from './pages/actores-detail/actores-detail.component';
 import { GestionComponent } from './pages/gestion/gestion.component';
 import { ActorsComponent } from './pages/actors/actors.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   {path:"", pathMatch : "full", component:HomeComponent},
   {path:"actors", component:ActorsComponent},
   {path:"gestion", component:GestionComponent},
-  {path:"actors/:ActorID", component:ActoresDetailComponent}
+  {path:"actors/:ActorID", component:ActoresDetailComponent},
+  {path:"edit", component:EditComponent}
 ];
 
 @NgModule({

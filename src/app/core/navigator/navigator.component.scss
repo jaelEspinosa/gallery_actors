@@ -4,9 +4,12 @@ a{
 }
 nav{
   background-color: bisque;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-around;
   align-items:center;
   gap:10px;
+  img{
+    width: 50px;
+  }
 }

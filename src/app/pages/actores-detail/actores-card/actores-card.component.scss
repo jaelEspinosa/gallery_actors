@@ -21,6 +21,22 @@
   .name{
     font-weight: bold;
     text-transform:uppercase ;
-
   }
+  .card-footer{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .buttons{
+      width: 300px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+
+
+    }
+  }
+
 }

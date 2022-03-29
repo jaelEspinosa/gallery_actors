@@ -1,0 +1,25 @@
+
+
+
+.texto{
+
+     background: url("/assets/images/background.jpg");
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-text-stroke: 2px rgb(41, 40, 40);
+     font-size: 8VW;
+     font-weight: bolder;
+}
+
+.title{
+  margin: auto;
+  margin-bottom: 85px;
+  width: 90vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+

@@ -1,0 +1,22 @@
+.redes-sociales{
+
+  padding:25px;
+  display:flex;
+  gap: 25px;
+img:hover{
+  width: 26px;
+  box-shadow: 10px 10px 10px gray;
+  transition:0.5s
+}
+}
+
+footer{
+  background-color: bisque;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 900px;
+  width: 100%;
+  margin-top: 25px;
+  bottom:0;
+}
