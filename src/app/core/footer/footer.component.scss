@@ -15,13 +15,13 @@ footer{
     display:flex;
     gap: 15px;
   img:hover{
-    width: 3vw;
+    transform: scale(105%);
     box-shadow: 10px 10px 10px gray;
     transition:0.5s
   }
   }
   .right{
-
+    font-size: 2vw;
     padding-right: 20px;
   }
 }
