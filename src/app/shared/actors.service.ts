@@ -11,19 +11,19 @@ export class ActorsService {
   data:any;
 
   getActors(){
-    return this.http.get('http://localhost:5000/actores');
+    return this.http.get('https://ators-api.vercel.app/actores');
   }
   postActors(createdActor:any){
 
-     return this.http.post("http://localhost:5000/actores", createdActor)
+     return this.http.post("https://ators-api.vercel.app/actores", createdActor)
   }
   getActorsById(actorID:any){
 
-    return this.http.get('http://localhost:5000/actores/' + actorID)
+    return this.http.get('https://ators-api.vercel.app/actores/' + actorID)
 
   }
   deleteActorsById(actorID:any){
-    return this.http.delete('http://localhost:5000/actores/delete/' + actorID)
+    return this.http.delete('https://ators-api.vercel.app/actores/delete/' + actorID)
   }
 
 
@@ -34,7 +34,7 @@ updateInfo(item:any){
 }
 
 putActor(editedActor:any, actorID:any){
-  return this.http.put('http://localhost:5000/actores/update/'+actorID, editedActor)
+  return this.http.put('https://ators-api.vercel.app/actores/update/'+actorID, editedActor)
 
 }
 
@@ -46,6 +46,7 @@ putActor(editedActor:any, actorID:any){
 // DESPLEGADO
 
 /* https://ators-api-jaelespinosa.vercel.app/actores */
+
 
 
 //LOCAL
