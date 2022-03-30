@@ -18,9 +18,9 @@ export class ActoresCardComponent implements OnInit {
       this.actorsService.deleteActorsById(params.get("ActorID")).subscribe(actor =>{
       this.actor = actor
       console.log(actor)
-      setTimeout(() => {
+
       this.router.navigate(['/actors'])
-      }, 1500);
+
      })
     })
   }
