@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormErrorsComponent } from './shared/form-errors/form-errors.component';
 import { SubmmitOKComponent } from './shared/submmit-ok/submmit-ok.component';
 import { EditComponent } from './pages/edit/edit.component';
+import { ToastComponent } from './shared/toast/toast.component';
 
 
 
@@ -34,7 +35,8 @@ import { EditComponent } from './pages/edit/edit.component';
     ActoresCardComponent,
     FormErrorsComponent,
     SubmmitOKComponent,
-    EditComponent
+    EditComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,

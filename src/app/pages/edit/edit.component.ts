@@ -1,3 +1,4 @@
+import { ToastService } from './../../shared/toast.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { ActorsService } from 'src/app/shared/actors.service';
@@ -15,7 +16,7 @@ export class EditComponent implements OnInit {
   public submitted:boolean= false;
   public createdActor:any;
   public actorID:any=this.actorsService.data._id;
-  constructor(private formBuilder: FormBuilder,public actorsService: ActorsService, public router:Router, public route:ActivatedRoute) {
+  constructor(private toastService: ToastService,private formBuilder: FormBuilder,public actorsService: ActorsService, public router:Router, public route:ActivatedRoute) {
     this.actorsForm =this.formBuilder.group(
       {
         name:[this.actorsService.data.name,[Validators.required]],
@@ -47,12 +48,19 @@ export class EditComponent implements OnInit {
       console.log('y este el que mandamos al servicio',this.createdActor);*/
       console.log(this.actorID)
 
-       // this.actorsService.postActors(this.createdActor).subscribe();        // esto es el post que luego tengo que activar
+       // this.actorsService.postActors(this.createdActor).subscribe();
+            // esto es el post que luego tengo que activar
 
         this.actorsService.putActor(newActor, this.actorID).subscribe()
+        this.toastService.messageObs$ = {
+          tittle : "ELEMENTO ACTUALIZADO",
+          description: 'CON ÉXITO',
+          color: '#97e997'
+        }
+
         setTimeout(() => {
           this.router.navigate(['/actors'])
-        }, 1500);
+        }, 2000);
 
     }
 

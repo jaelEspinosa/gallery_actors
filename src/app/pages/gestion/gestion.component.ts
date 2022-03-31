@@ -1,3 +1,4 @@
+import { ToastService } from './../../shared/toast.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { ActorsService } from 'src/app/shared/actors.service';
@@ -18,7 +19,7 @@ export class GestionComponent implements OnInit {
   public createdActor:any;
 
 
-  constructor(private formBuilder: FormBuilder,public actorsService: ActorsService, public router:Router, public route:ActivatedRoute) {
+  constructor(private toastService: ToastService,private formBuilder: FormBuilder,public actorsService: ActorsService, public router:Router, public route:ActivatedRoute) {
     this.actorsForm =this.formBuilder.group(
       {
         name:['',[Validators.required]],
@@ -48,11 +49,17 @@ export class GestionComponent implements OnInit {
       console.log('y este el que mandamos al servicio',this.createdActor);*/
 
      this.createdActor = newActor;
+     this.toastService.messageObs$ = {
+      tittle : "ELEMENTO GUARDADO",
+      description: 'CON ÉXITO',
+      color: '#97e997'
+    }
+
 
      this.actorsService.postActors(this.createdActor).subscribe();        // esto es el post que luego tengo que activar
      setTimeout(() => {
       this.router.navigate(['/actors'])
-    }, 1500);
+    }, 2000);
 
 
 

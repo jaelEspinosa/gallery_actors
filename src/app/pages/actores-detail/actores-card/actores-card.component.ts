@@ -1,3 +1,4 @@
+import { ToastService } from './../../../shared/toast.service';
 import { ActivatedRoute,Router } from '@angular/router';
 import { ActorsService } from 'src/app/shared/actors.service';
 import { Component, Input, OnInit } from '@angular/core';
@@ -9,7 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ActoresCardComponent implements OnInit {
   @Input() actor:any
-  constructor(private route: ActivatedRoute,private actorsService: ActorsService,private router:Router) { }
+  constructor(private toastService:ToastService, private route: ActivatedRoute,private actorsService: ActorsService,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -18,12 +19,21 @@ export class ActoresCardComponent implements OnInit {
       this.actorsService.deleteActorsById(params.get("ActorID")).subscribe(actor =>{
       this.actor = actor
       console.log(actor)
+      setTimeout(() => {
+        this.router.navigate(['/actors'])
+      }, 2000);
 
-      this.router.navigate(['/actors'])
 
      })
     })
+  this.toastService.messageObs$ = {
+    tittle : "ELEMENTO ELIMINADO",
+    description: 'CON ÉXITO',
+    color: '#998061'
   }
+
+  }
+
   editActor(item:any){
 this.actorsService.updateInfo(item);
 this.router.navigate(['/edit'])
